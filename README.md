@@ -1,4 +1,4 @@
-# kuls-mybatis
+# Mybatis系列文章-Mybatis学习路径
 JAVAandPython君Mybatis系列代码
 
 文章：
