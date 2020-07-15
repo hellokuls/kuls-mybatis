@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--核心配置文件-->
+
+<mapper namespace="com.kuls.dao.UserMapper">
+
+    <!--   开启耳机缓存    -->
+    <cache eviction="FIFO"
+           flushInterval="60000"
+           size="512"
+           readOnly="true"/>
+
+    <select id="queryUserByID" resultType="user" useCache="true">
+        select * from user where id = #{id}
+    </select>
+</mapper>
